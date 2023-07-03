@@ -1,0 +1,39 @@
+
+:root{
+    /* Primary */
+    --blue: hsl(223, 87%, 63%);
+/* 
+ Secondary */
+
+--pale-blue: hsl(223, 100%, 88%);
+--light-red: hsl(354, 100%, 66%);
+
+/* Neutral */
+
+--gray: hsl(0, 0%, 59%)
+--very-dark-blue: hsl(209, 33%, 12%)
+
+
+
+}
+body {
+  display: grid;
+  place-items: center;
+  font-family: 'Libre Franklin', sans-serif;
+}
+header {
+  display: grid;
+  text-align: center;
+  place-items: center;
+}
+header h1{
+    color: var(--gray) ;
+    font-weight: 700;
+}
+main {
+  width: 90%;
+  max-width: 1200px;
+}
+main img {
+  width: inherit;
+}
