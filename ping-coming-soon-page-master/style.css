@@ -58,16 +58,19 @@ header input {
   font-size: 1rem;
   margin: 0 12px;
   border: 1px solid var(--pale-blue);
+  font-family: inherit;
+  transition: transform 0.25s;
 }
 header input::placeholder {
   color: var(--pale-blue);
   font-size: 0.8rem;
 }
 header input:hover {
-  border-color: var(--blue);
+  transform: scale(1.1);
 }
-header input:active {
-  border-color: var(--blue);
+header input:focus {
+  outline: none;
+  /* border-color: var(--blue); */
 }
 header button {
   color: white;
@@ -83,9 +86,7 @@ header button:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-header button:active {
-  background-color: var(--pale-blue);
-}
+
 main {
   margin-bottom: 4rem;
 }
@@ -113,4 +114,51 @@ footer p {
 footer .icon:hover {
   transform: scale(1.4);
   cursor: pointer;
+}
+
+input:invalid {
+  border-color: red;
+}
+.error {
+  width: 100%;
+  color: red;
+  font-size: 0.8rem;
+  text-align: start;
+  padding-top: 10px;
+  padding-left: 50px;
+  font-style: italic;
+}
+
+.error.active {
+  display: block;
+}
+
+@media screen and (max-width: 730px) {
+  * {
+    margin-bottom: 10px;
+  }
+  body {
+    font-size: 12px;
+  }
+  header .logo {
+    margin: 40px 0;
+  }
+  header input {
+    width: 86%;
+    margin: 0 0 40px 0;
+  }
+  header button {
+    width: 100%;
+  }
+  main img {
+    width: 100%;
+  }
+  footer .icon {
+    font-size: 1rem;
+    color: var(--blue);
+    margin: 0 1rem;
+  }
+  footer p {
+    font-size: 0.5rem;
+  }
 }
