@@ -22,9 +22,15 @@
         <img class="logo" src="images/logo.svg" alt="logo" />
         <h1>We are launching <span class="soon">soon!</span></h1>
         <h2>Subscribe and get notified</h2>
-        <form action="#">
-          <input type="email" placeholder="Your email address..." />
+        <form action="#" id="email-form" novalidate>
+          <input
+            type="email"
+            class="email"
+            placeholder="Your email address..."
+          />
+
           <button class="notify" type="submit">Notify me</button>
+          <span class="error"></span>
         </form>
       </header>
       <main>
