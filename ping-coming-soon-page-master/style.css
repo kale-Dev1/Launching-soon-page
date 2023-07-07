@@ -80,9 +80,31 @@ header button:hover {
 header button:active {
   background-color: var(--pale-blue);
 }
+main {
+  margin-bottom: 4rem;
+}
 
 main img {
   width: 600px;
   margin: 10px auto;
   display: block;
+}
+footer {
+  text-align: center;
+}
+
+footer .icon {
+  font-size: 1.5rem;
+  color: var(--blue);
+  margin: 0 1rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+  margin: 16px 0;
+  color: var(--gray);
+}
+footer .icon:hover {
+  transform: scale(1.4);
+  cursor: pointer;
 }
