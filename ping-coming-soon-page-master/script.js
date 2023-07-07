@@ -13,7 +13,10 @@ email.addEventListener("input", (event) => {
 
 form.addEventListener("submit", function (e) {
   // email.addEventListener('input')
-
+  if (email.value === "") {
+    emailError.textContent = "You need to enter an email address.";
+    email.classList.toggle("active");
+  }
   if (!email.validity.valid) {
     showError();
     e.preventDefault();
@@ -24,8 +27,9 @@ function showError() {
   if (email.validity.valueMissing) {
     emailError.textContent = "You need to enter an email address.";
   } else if (email.validity.typeMismatch) {
+    email.classList.remove("active");
     emailError.textContent = "Please provide a valid email address";
   }
 
-  emailError.className = "error active";
+  emailError.className = "error";
 }
