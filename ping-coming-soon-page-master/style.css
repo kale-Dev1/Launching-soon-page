@@ -19,6 +19,7 @@
 
 body {
   font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
 }
 .container {
   width: 80%;
@@ -28,13 +29,14 @@ header {
   display: grid;
   text-align: center;
   place-items: center;
+  margin-bottom: 4rem;
 }
 header .logo {
   margin: 4rem 0;
 }
 header h1 {
   color: var(--gray);
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-weight: 300;
   margin-bottom: 1rem;
 }
@@ -59,6 +61,7 @@ header input {
 }
 header input::placeholder {
   color: var(--pale-blue);
+  font-size: 0.8rem;
 }
 header button {
   color: white;
@@ -67,12 +70,19 @@ header button {
   background-color: var(--blue);
   border-radius: 20px;
   border: none;
+  box-shadow: 5px 10px 8px rgba(75, 119, 215, 0.1);
+  transition: transform 0.25s;
 }
-main {
-  width: 90%;
-  max-width: 1200px;
-  border: 1px solid silver;
+header button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
+header button:active {
+  background-color: var(--pale-blue);
+}
+
 main img {
-  width: inherit;
+  width: 600px;
+  margin: 10px auto;
+  display: block;
 }
