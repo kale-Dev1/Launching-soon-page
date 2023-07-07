@@ -63,6 +63,12 @@ header input::placeholder {
   color: var(--pale-blue);
   font-size: 0.8rem;
 }
+header input:hover {
+  border-color: var(--blue);
+}
+header input:active {
+  border-color: var(--blue);
+}
 header button {
   color: white;
   font-size: 1rem;
